@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Typewriter Focus Desk</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="top-bar">
+      <div>
+        <h1>Typewriter Desk</h1>
+        <p class="subtitle">Distraction-free focus timer &amp; task pad</p>
+      </div>
+      <div class="theme-badge" id="theme-label">Theme: Classic Paper</div>
+    </header>
+
+    <section class="shortcut-bar" id="shortcut-guide" aria-label="Keyboard Shortcuts">
+      <div class="shortcut-title">Keyboard Shortcuts</div>
+      <div class="shortcut-list">
+        <span><kbd>S</kbd> Start / Pause Timer</span>
+        <span><kbd>R</kbd> Reset Timer</span>
+        <span><kbd>N</kbd> New Task</span>
+        <span><kbd>T</kbd> Switch Theme</span>
+        <span><kbd>M</kbd> Focus / Break Mode</span>
+      </div>
+    </section>
+
+    <main class="workspace">
+      <section class="card timer-card">
+        <div class="mode-tabs">
+          <button class="tab active" id="btn-focus" type="button">Focus (25m)</button>
+          <button class="tab" id="btn-break" type="button">Break (5m)</button>
+        </div>
+
+        <div class="timer-display" id="timer">25:00</div>
+        <p class="status-text" id="status-msg">Ready when you are.</p>
+
+        <div class="controls">
+          <button class="key-btn primary" id="start-btn" type="button">Start</button>
+          <button class="key-btn" id="reset-btn" type="button">Reset</button>
+          <button class="key-btn" id="theme-btn" type="button">Theme</button>
+        </div>
+      </section>
+
+      <section class="card tasks-card">
+        <h2>Session Tasks</h2>
+        <form id="task-form" class="task-input-row">
+          <input
+            type="text"
+            id="task-input"
+            placeholder="Type a task and press Enter..."
+            maxlength="60"
+            autocomplete="off"
+          >
+          <button class="key-btn primary" type="submit">Add</button>
+        </form>
+
+        <ul id="task-list" class="task-list"></ul>
+
+        <div class="task-footer">
+          <span id="task-count">0 tasks remaining</span>
+          <button class="text-btn" id="clear-done" type="button">Clear completed</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
