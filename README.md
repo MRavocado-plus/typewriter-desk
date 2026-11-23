@@ -1,6 +1,6 @@
 
 # Typewriter Focus Desk
-
+A simple timer to help you focus!
 How to Run
 Download or clone this repository, or open  the live link 
 
